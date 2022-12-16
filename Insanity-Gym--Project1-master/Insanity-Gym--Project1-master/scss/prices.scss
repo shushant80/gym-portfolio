@@ -1,0 +1,211 @@
+// Imports
+@import 'colors';
+@import 'mediaqueries';
+@import 'common';
+@import 'buttons';
+
+// Header
+
+.prices-header {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/prices-header.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-align: center;
+    border-bottom: 2px solid $primary-color;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    .showcase {
+        z-index: 2;
+
+        .title-area {
+            padding: 1rem;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            .main-title {
+                margin-bottom: 1rem;
+                transform: translateX(-100vw);
+            }
+
+            h3 {
+                transform: translateX(100vw);
+            }
+            
+            .highlight {
+                color: white;
+            }
+        }
+        .button-area {
+            opacity: 0;
+        }
+    }
+}
+
+// Section 1 Prices Area
+.prices-area {
+    background-color: $background-color2;
+    padding: 1rem;
+    text-align: center;
+
+    .prices {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+
+        @media screen and (max-width: 770px) {
+            font-size: 1rem;
+
+            .membership {
+                margin: 0;
+                min-width: 100%;
+            }
+        }
+
+        .membership {
+            width: 31rem;
+            max-width: 80%;
+            color: white;
+            text-align: center;
+            background-color:rgba($background-color,1);
+            margin: 1rem;
+            padding: 2rem;
+            border: 2px solid rgba($color: $primary-color, $alpha: 0.4);
+
+            .membership-type {
+                margin: 2rem 0;
+                color: $primary-color;
+                font-size: 2rem;
+            }
+
+            .price {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+
+                .unit {
+                    color: $primary-color;
+                }
+            }
+
+            ul {
+
+                li {
+                    border-top: 2px solid rgba($tertiary-color,0.1);
+                    width: 100%;
+                    padding: 2rem 0;
+                }
+            }
+        }
+    }
+}
+
+.prices-area {
+    color: white;
+    padding: 2rem;
+
+    .section-title {
+        text-align: left;
+        color: $primary-color;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        text-transform: capitalize;
+
+        @media screen and (max-width: 770px) {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+
+    .prices {
+        margin-bottom: 2rem;
+
+        @media screen and (max-width: 770px) {
+            padding: 0;
+        }
+    }
+
+    .pt-prices {
+
+        .sub-title {
+            text-align: left;
+            color: $primary-color;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            @media screen and (max-width: 770px) {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .prices-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        @media screen and (max-width: 770px) {
+            padding: 0rem;
+
+            .membership {
+                min-width: 100%;
+            }
+        }
+        .membership {
+            width: 31rem;
+            max-width: 80%;
+            color: white;
+            text-align: center;
+            background-color:rgba($background-color,1);
+            margin: 1rem;
+            padding: 2rem 1rem;
+            border: 2px solid rgba($color: $primary-color, $alpha: 0.4);
+
+            .membership-type {
+                margin: 2rem 0;
+                color: $primary-color;
+                font-size: 2rem;
+            }
+    
+            .price {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+    
+                .unit {
+                    color: $primary-color;
+                }
+            }
+    
+            ul {
+                li {
+                    border-top: 2px solid rgba($tertiary-color,0.1);
+                    width: 100%;
+                    padding: 2rem 0;
+                }
+            }
+        }
+    }
+}   

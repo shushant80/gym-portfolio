@@ -1,0 +1,218 @@
+// Imports
+@import 'colors';
+@import 'mediaqueries';
+@import 'common';
+@import 'buttons';
+
+// Modal Styling
+
+.modal {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #closer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        i.fas {
+            color: $primary-color;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }
+
+    .modal-content {
+        max-width: 1200px;
+        height: 60%;
+        min-width: 40%;
+        margin: auto;
+        background-color: white;
+        border: 3px solid $primary-color;
+        overflow: hidden;
+
+        @media screen and (max-width: 770px) {
+            height: 60%;
+            width: auto;
+
+            .modal-image-area {
+                width: 100%;
+                height: 100%;
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            height: 35%;
+        }
+
+        .modal-image-area {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &.view {
+        visibility: visible;
+    }
+}
+
+// Modal Styling End
+
+.facilities-header {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/facilities-header.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-align: center;
+    border-bottom: 2px solid $primary-color;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    .showcase {
+        z-index: 2;
+
+        .title-area {
+            padding: 1rem;
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            .main-title {
+                margin-bottom: 1rem;
+                transform: translateX(-100vw);
+            }
+
+            h3 {
+                transform: translateX(100vw);
+            }
+            .highlight {
+                color: white;
+            }
+        }
+        .button-area {
+            opacity: 0;
+        }
+    }
+}
+
+// Section 1 Gym Facilities
+.gym-facilities {
+    color: white;
+    padding: 2rem;
+
+    .section-title {
+        color: $primary-color;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+    .section-description {
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .facility-features {
+
+        ul {
+            list-style-type: none;
+            
+            li::before {
+                margin-bottom: 0.5rem;
+                content: "\2022";
+                color: $primary-color;
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }
+    }
+}
+
+.gallery {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $background-color2;
+    
+    .image-gallery {
+        .weights,
+        .cardio,
+        .functional {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            &.hide {
+                transform: scale(0);
+                display: none;
+                transition: all 0.5s ease-in-out;
+            }
+        
+            &.show {
+                transform: scale(1);
+                transition: all 0.5s ease-in-out;
+            }
+            img {
+                width: 25rem;
+                max-width: 100%;
+                height: 20rem;
+                margin: 1rem 1rem;
+                cursor: pointer;
+                border: 2px solid $primary-color;
+
+                @media screen and (max-width: 770px) {
+                    margin: 0.5rem 0;
+                    display: inline-block;
+                    transform: scale(1);
+                }
+                @media screen and (max-width: 480px) {
+                    height: 15rem;
+                    min-width: 90%;
+                    margin: 0.5rem 0.5rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        padding: 1rem;
+    }
+}
+// Section 1 End
+
